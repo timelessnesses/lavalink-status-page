@@ -1,0 +1,49 @@
+
+@font-face {
+  font-family: "Open sans";
+  src: url(./OpenSans-Regular.ttf);
+}
+body {
+  font-family: "Open Sans";
+  font-size: 20px;
+  color: rgb(16, 197, 182);
+  justify-content: center;
+  text-align: center;
+background: -moz-linear-gradient(270deg, rgba(10, 6, 82) 0%, rgba(10, 121, 143) 100%);
+background: -webkit-linear-gradient(270deg, rgba(10, 6, 82) 0%, rgba(10, 121, 143) 100%);
+background: linear-gradient(270deg, rgb(10, 6, 82) 0%, rgb(10, 121, 143) 100%);
+}
+
+a:link {
+  color: rgb(16, 197, 182);
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: rgb(16, 197, 182);
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(16, 197, 182);
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:active {
+  color: rgb(16, 197, 182);
+  background-color: transparent;
+  text-decoration: none;
+}
+
+#info #status {
+  text-align: center;
+}
+#particles-js {
+  position: fixed;
+  width: 110vw;
+  height: 110vh;
+  pointer-events: none;
+}
