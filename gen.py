@@ -33,6 +33,30 @@ getStatus();
 setInterval(getStatus, 2000);
 """
 
+html = """
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lavalink by timelessnesses</title>
+    <link rel="stylesheet" href="./index.css" />
+    <script defer src="./index.js"></script>
+    <script defer src="./particles.js"></script>
+    <script defer src="./app.js"></script>
+  </head>
+  <body>
+    <div id="bg"></div>
+    <div id="particles-js"></div>
+    <h1>Lavalink by replacemename</h1>
+    <div id="status">Processing</div>
+    <div id="info">Processing</div>
+  </body>
+</html>
+
+"""
+
 port = input("What's your lavalink's port?: ")
 password = input("What's your lavalink's password?: ")
 host_dynamic = input(
@@ -52,6 +76,15 @@ if host:
 
 with open("index.js", "w") as f:
     f.write(js_script)
+
+name = input("What's your name?: ")
+hyperlink = input("Do you want hyperlink in your name? (y/n): ")
+if hyperlink.lower() == "y":
+    hyperlink = input("What's your hyperlink?: ")
+    name = f"<a href='{hyperlink}'>{name}</a>"
+html = html.replace("replacemename", name)
+with open("index.html", "w") as f:
+    f.write(html)
 
 print(
     "You can now host it! I recommend using a reverse proxy like nginx or apache but if you're lazy just use simple flask server that I made (app.py)."
